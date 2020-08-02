@@ -19,6 +19,7 @@ import { fade, makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    marginTop: "auto",
     backgroundColor: "rgba(0, 0, 0, 0.6)",
   },
   toolbar: {

@@ -19,7 +19,7 @@ import { makeStyles, fade } from "@material-ui/core/styles";
 import cx from "classnames";
 
 const useStyles = makeStyles((theme) => ({
-  logo: {
+  root: {
     position: "sticky",
     top: 0,
     marginTop: -193,
@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
     minHeight: 129,
     padding: `${theme.spacing(2)}px 0`,
     zIndex: 1101,
+  },
+  logo: {
+    fontWeight: theme.typography.fontWeightBold,
   },
   links: {
     "& > a": {
@@ -84,12 +87,19 @@ const useStyles = makeStyles((theme) => ({
   gutterBottom: {
     marginBottom: `${theme.spacing(1)}px`,
   },
+  bullet: {
+    display: "inline-block",
+    margin: "0 2px",
+    transform: "scale(0.8)",
+  },
 }));
 
 const NavBar = () => {
   const classes = useStyles();
   const navbarRef = useRef(null);
   const [sticked, setSticked] = useState(false);
+
+  const bull = <span className={classes.bullet}>•</span>;
 
   useEffect(() => {
     const domNode = navbarRef.current;
@@ -111,7 +121,7 @@ const NavBar = () => {
   };
 
   return (
-    <Paper square elevation={0} className={classes.logo} ref={navbarRef}>
+    <Paper square elevation={0} className={classes.root} ref={navbarRef}>
       <Grid
         container
         alignItems="center"
@@ -128,8 +138,8 @@ const NavBar = () => {
         </Grid>
 
         <Grid item xs={6} lg={4}>
-          <Typography variant="h4" align="center">
-            TRIUMPH PRET-A-PORTER
+          <Typography variant="h4" className={classes.logo} align="center">
+            TRIUMPH PRET{bull}A{bull}PORTER
           </Typography>
         </Grid>
 
