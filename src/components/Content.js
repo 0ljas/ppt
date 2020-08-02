@@ -6,7 +6,7 @@ import Card from "./Card";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: 'url("/images/tambourine.svg") repeat fixed',
+    background: 'url("images/tambourine.svg") repeat fixed',
     backgroundSize: 50,
     marginTop: 64,
     padding: `${theme.spacing(3)}px 0`,
@@ -27,25 +27,25 @@ const Content = () => {
           <Card
             productType="Ботильоны"
             brandName="Trewww"
-            imgUrl="/images/products/1.webp"
+            imgUrl="images/products/1.webp"
             price="15000 тг"
           />
           <Card
             productType="Ботильоны"
             brandName="Calvin Clein"
-            imgUrl="/images/products/9.webp"
+            imgUrl="images/products/9.webp"
             price="6000 тг"
           />
           <Card
             productType="Ботильоны"
             brandName="Yoourrw"
-            imgUrl="/images/products/10.webp"
+            imgUrl="images/products/10.webp"
             price="106000 тг"
           />
           <Card
             productType="Ботильоны"
             brandName="Lopppe"
-            imgUrl="/images/products/5.webp"
+            imgUrl="images/products/5.webp"
             price="15000 тг"
           />
         </div>
