@@ -27,19 +27,19 @@ const Content = () => {
           <Card
             productType="Ботильоны"
             brandName="Trewww"
-            imgUrl="images/products/1.webp"
+            imgUrl="../images/products/1.webp"
             price="15000 тг"
           />
           <Card
             productType="Ботильоны"
             brandName="Calvin Clein"
-            imgUrl="images/products/9.webp"
+            imgUrl="%PUBLIC_URL%/images/products/9.webp"
             price="6000 тг"
           />
           <Card
             productType="Ботильоны"
             brandName="Yoourrw"
-            imgUrl="images/products/10.webp"
+            imgUrl="/images/products/10.webp"
             price="106000 тг"
           />
           <Card

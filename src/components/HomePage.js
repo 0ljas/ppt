@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
-    backgroundImage: "url(images/bg-main.jpg)",
+    backgroundImage: "url('%PUBLIC_URL%/imags/bg-main.jpg')",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   },
