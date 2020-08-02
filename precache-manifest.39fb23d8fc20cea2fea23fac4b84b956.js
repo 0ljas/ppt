@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "61d3c71cf3389ffd3f645f11bb0100b3",
+    "revision": "45cbf8b25d2dcd7df5097fa3075d7267",
     "url": "/ppt/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ppt/static/js/2.0dfec8f7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "81202163b0a640e9ecb8",
-    "url": "/ppt/static/js/main.45aecdbb.chunk.js"
+    "revision": "8409cb186a9649af1348",
+    "url": "/ppt/static/js/main.425be7b2.chunk.js"
   },
   {
     "revision": "b8f886f5a3897a0be51d",
