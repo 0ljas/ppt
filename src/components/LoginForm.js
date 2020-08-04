@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     borderColor: "inherit",
     borderRadius: 0,
     fontStyle: "oblique",
+    fontSize: 17,
   },
 }));
 
@@ -34,6 +35,7 @@ const LoginForm = () => {
         size="large"
         variant="outlined"
         className={classes.submitBtn}
+        fullWidth
       >
         Войти
       </Button>

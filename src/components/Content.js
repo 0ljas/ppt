@@ -1,8 +1,15 @@
 import React from "react";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Typography, Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import StandartContainer from "./StandartContainer";
 import Card from "./Card";
+import {
+  About,
+  FittingInfo,
+  MobileLinks,
+  SocialLinks,
+  EmailSubscription,
+} from "./About";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,6 +22,15 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(2),
     },
   },
+  btn: {
+    borderWidth: 2,
+    borderColor: "inherit",
+    borderRadius: 0,
+    fontStyle: "oblique",
+  },
+  mt5: {
+    marginTop: theme.spacing(5),
+  },
 }));
 
 const Content = () => {
@@ -23,32 +39,53 @@ const Content = () => {
   return (
     <Box className={classes.root}>
       <StandartContainer title="Новинки сезона" badge="35 товаров">
-        <div style={{ display: "flex", flexShrink: 0 }}>
-          <Card
-            productType="Ботильоны"
-            brandName="Trewww"
-            imgUrl="images/products/1.webp"
-            price="15000 тг"
-          />
-          <Card
-            productType="Ботильоны"
-            brandName="Calvin Clein"
-            imgUrl="images/products/9.webp"
-            price="6000 тг"
-          />
-          <Card
-            productType="Ботильоны"
-            brandName="Yoourrw"
-            imgUrl="images/products/10.webp"
-            price="106000 тг"
-          />
-          <Card
-            productType="Ботильоны"
-            brandName="Lopppe"
-            imgUrl="images/products/5.webp"
-            price="15000 тг"
-          />
-        </div>
+        <Grid container spacing={3}>
+          <Grid item xs={3}>
+            <Card
+              productType="Ботильоны"
+              brandName="Trewww"
+              imgUrl="images/products/1.webp"
+              price="15 000 тг."
+              sold
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <Card
+              productType="Ботильоны"
+              brandName="Calvin Clein"
+              imgUrl="images/products/9.webp"
+              price="6 000 тг."
+              inCart
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <Card
+              productType="Ботильоны"
+              brandName="Yoourrw"
+              imgUrl="images/products/10.webp"
+              price="106 000 тг."
+              sold
+            />
+          </Grid>
+          <Grid item xs={3}>
+            <Card
+              productType="Ботильоны"
+              brandName="Lopppe"
+              imgUrl="images/products/5.webp"
+              price="15 000 тг."
+            />
+          </Grid>
+        </Grid>
+        <Typography align="center" className={classes.mt5}>
+          <Button
+            type="button"
+            size="large"
+            variant="outlined"
+            className={classes.btn}
+          >
+            ПОКАЗАТЬ ВСЕ
+          </Button>
+        </Typography>
       </StandartContainer>
 
       <StandartContainer
@@ -77,6 +114,12 @@ const Content = () => {
           totam temporibus?
         </Typography>
       </StandartContainer>
+
+      <About />
+      <FittingInfo />
+      <MobileLinks />
+      <SocialLinks />
+      <EmailSubscription />
     </Box>
   );
 };
