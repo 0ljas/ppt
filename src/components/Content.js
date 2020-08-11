@@ -12,6 +12,7 @@ import {
 } from "./About";
 import Article from "./Article";
 import ProductSearch from "./ProductSearch";
+import BuyerForm from "./BuyerForm";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,6 +32,7 @@ const Content = () => {
 
   return (
     <Box className={classes.root}>
+      <BuyerForm />
       <ProductSearch />
       <Grid container justify="center">
         <Grid item xs={8} xl={7}>
