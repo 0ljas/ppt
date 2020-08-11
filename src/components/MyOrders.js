@@ -31,7 +31,7 @@ const MyOrders = () => {
   return (
     <Grid container justify="center">
       <Grid item xs={8} xl={7}>
-        <StandartContainer title="ДАННЫЕ ДЛЯ ПОЛУЧЕНИЯ">
+        <StandartContainer title="Мои заказы" badge="3 товара">
           {mockData.map((item, idx) => {
             return <CardLine key={idx} {...item} />;
           })}
