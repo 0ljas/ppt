@@ -3,7 +3,6 @@ import {
   Typography,
   Button,
   Grid,
-  Paper,
   IconButton,
   FormControl,
   InputLabel,
@@ -14,6 +13,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import StarIcon from "@material-ui/icons/Star";
 import { yellow } from "@material-ui/core/colors";
 import cx from "classnames";
+import StandartContainer from "./StandartContainer";
 
 const useStyles = makeStyles((theme) => ({
   media: {
@@ -30,9 +30,6 @@ const useStyles = makeStyles((theme) => ({
   },
   mt3: {
     marginTop: theme.spacing(3),
-  },
-  p4: {
-    padding: theme.spacing(4),
   },
   fsOblique: {
     fontStyle: "oblique",
@@ -152,7 +149,7 @@ const ProductPreview = () => {
           </Grid>
         </Grid>
         <Grid item xs={4}>
-          <Paper square elevation={6} className={classes.p4}>
+          <StandartContainer>
             <div className={classes.titleContainer}>
               <div>
                 <Typography
@@ -253,7 +250,7 @@ const ProductPreview = () => {
             <Typography className={classes.fwBold}>
               Ацетат 73%, Шелк 27%
             </Typography>
-          </Paper>
+          </StandartContainer>
         </Grid>
       </Grid>
     </Grid>

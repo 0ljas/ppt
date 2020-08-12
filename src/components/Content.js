@@ -16,6 +16,7 @@ import BuyerForm from "./BuyerForm";
 import MyOrders from "./MyOrders";
 import MyCart from "./MyCart";
 import ProductPreview from "./ProductPreview";
+import BrandList from "./BrandList";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,6 +36,7 @@ const Content = () => {
 
   return (
     <Box className={classes.root}>
+      <BrandList />
       <ProductPreview />
       <MyCart />
       <MyOrders />
