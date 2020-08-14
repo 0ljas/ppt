@@ -4,14 +4,80 @@ import { makeStyles } from "@material-ui/core/styles";
 import ProductFilter from "./ProductFilter";
 import ProductSort from "./ProductSort";
 import StandartContainer from "./StandartContainer";
-import Card from "./Card";
+import ProductItem from "./ProductItem";
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
   filterContainer: {
     marginRight: theme.spacing(2),
   },
 }));
+
+const mockData = [
+  {
+    productType: "Ботильоны",
+    brandName: "Trewww",
+    imgUrl: "images/products/1.webp",
+    price: "15 000 тг.",
+    sold: true,
+    inCart: false,
+  },
+  {
+    productType: "Ботильоны",
+    brandName: "Calvin Clein",
+    imgUrl: "images/products/3.jpg",
+    price: "6 000 тг.",
+    sold: false,
+    inCart: true,
+  },
+  {
+    productType: "Ботильоны",
+    brandName: "Yoourrw",
+    imgUrl: "images/products/10.webp",
+    price: "106 000 тг.",
+    sold: true,
+    inCart: false,
+  },
+  {
+    productType: "Ботильоны",
+    brandName: "Lopppe",
+    imgUrl: "images/products/5.webp",
+    price: "15 000 тг.",
+    sold: false,
+    inCart: false,
+  },
+  {
+    productType: "Ботильоны",
+    brandName: "Trewww",
+    imgUrl: "images/products/10.webp",
+    price: "15 000 тг.",
+    sold: false,
+    inCart: false,
+  },
+  {
+    productType: "Ботильоны",
+    brandName: "Calvin Clein",
+    imgUrl: "images/products/9.webp",
+    price: "6 000 тг.",
+    sold: false,
+    inCart: false,
+  },
+  {
+    productType: "Ботильоны",
+    brandName: "Yoourrw",
+    imgUrl: "images/products/2.webp",
+    price: "106 000 тг.",
+    sold: false,
+    inCart: true,
+  },
+  {
+    productType: "Ботильоны",
+    brandName: "Lopppe",
+    imgUrl: "images/products/6.jpg",
+    price: "15 000 тг.",
+    sold: true,
+    inCart: false,
+  },
+];
 
 const ProductSearch = () => {
   const classes = useStyles();
@@ -32,75 +98,11 @@ const ProductSearch = () => {
             badge="35 из 35 товаров"
           >
             <Grid container spacing={3}>
-              <Grid item xs={3}>
-                <Card
-                  productType="Ботильоны"
-                  brandName="Trewww"
-                  imgUrl="images/products/1.webp"
-                  price="15 000 тг."
-                  sold
-                />
-              </Grid>
-              <Grid item xs={3}>
-                <Card
-                  productType="Ботильоны"
-                  brandName="Calvin Clein"
-                  imgUrl="images/products/3.jpg"
-                  price="6 000 тг."
-                  inCart
-                />
-              </Grid>
-              <Grid item xs={3}>
-                <Card
-                  productType="Ботильоны"
-                  brandName="Yoourrw"
-                  imgUrl="images/products/10.webp"
-                  price="106 000 тг."
-                  sold
-                />
-              </Grid>
-              <Grid item xs={3}>
-                <Card
-                  productType="Ботильоны"
-                  brandName="Lopppe"
-                  imgUrl="images/products/5.webp"
-                  price="15 000 тг."
-                />
-              </Grid>
-              <Grid item xs={3}>
-                <Card
-                  productType="Ботильоны"
-                  brandName="Trewww"
-                  imgUrl="images/products/10.webp"
-                  price="15 000 тг."
-                />
-              </Grid>
-              <Grid item xs={3}>
-                <Card
-                  productType="Ботильоны"
-                  brandName="Calvin Clein"
-                  imgUrl="images/products/9.webp"
-                  price="6 000 тг."
-                />
-              </Grid>
-              <Grid item xs={3}>
-                <Card
-                  productType="Ботильоны"
-                  brandName="Yoourrw"
-                  imgUrl="images/products/2.webp"
-                  price="106 000 тг."
-                  inCart
-                />
-              </Grid>
-              <Grid item xs={3}>
-                <Card
-                  productType="Ботильоны"
-                  brandName="Lopppe"
-                  imgUrl="images/products/6.jpg"
-                  price="15 000 тг."
-                  sold
-                />
-              </Grid>
+              {mockData.map((item, idx) => (
+                <Grid item xs={3}>
+                  <ProductItem key={idx} {...item} />
+                </Grid>
+              ))}
             </Grid>
           </StandartContainer>
         </Grid>

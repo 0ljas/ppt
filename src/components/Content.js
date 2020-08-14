@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SeasonNoveltys from "./SeasonNoveltys";
 import SpecialOffer from "./SpecialOffer";
@@ -44,46 +44,14 @@ const Content = () => {
       <MyOrders />
       <BuyerForm />
       <ProductSearch />
-      <Grid container justify="center">
-        <Grid item xs={8} xl={7}>
-          <SeasonNoveltys />
-        </Grid>
-      </Grid>
-      <Grid container justify="center">
-        <Grid item xs={8} xl={7}>
-          <Article />
-        </Grid>
-      </Grid>
-      <Grid container justify="center">
-        <Grid item xs={8} xl={7}>
-          <SpecialOffer />
-        </Grid>
-      </Grid>
-      <Grid container justify="center">
-        <Grid item xs={8} xl={7}>
-          <About />
-        </Grid>
-      </Grid>
-      <Grid container justify="center">
-        <Grid item xs={8} xl={7}>
-          <FittingInfo />
-        </Grid>
-      </Grid>
-      <Grid container justify="center">
-        <Grid item xs={8} xl={7}>
-          <MobileLinks />
-        </Grid>
-      </Grid>
-      <Grid container justify="center">
-        <Grid item xs={8} xl={7}>
-          <SocialLinks />
-        </Grid>
-      </Grid>
-      <Grid container justify="center">
-        <Grid item xs={8} xl={7}>
-          <EmailSubscription />
-        </Grid>
-      </Grid>
+      <SeasonNoveltys />
+      <Article />
+      <SpecialOffer />
+      <About />
+      <FittingInfo />
+      <MobileLinks />
+      <SocialLinks />
+      <EmailSubscription />
     </Box>
   );
 };

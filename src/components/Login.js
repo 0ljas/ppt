@@ -21,15 +21,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Login() {
+const Login = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(1);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
   const handleChangeIndex = (index) => {
     setValue(index);
   };
@@ -61,4 +59,6 @@ export default function Login() {
       </SwipeableViews>
     </Paper>
   );
-}
+};
+
+export default Login;

@@ -1,6 +1,7 @@
 import React from "react";
-import { TextField, Button } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Button from "./extends/PPTButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -10,13 +11,8 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(1),
     },
   },
-  submitBtn: {
+  mt3: {
     marginTop: theme.spacing(3),
-    borderWidth: 2,
-    borderColor: "inherit",
-    borderRadius: 0,
-    fontStyle: "oblique",
-    fontSize: 17,
   },
 }));
 
@@ -30,13 +26,7 @@ const LoginForm = () => {
     <form autoComplete="off" className={classes.root} onSubmit={handleSubmit}>
       <TextField id="standard-basic1" label="Номер телефона" />
       <TextField id="standard-basic2" label="Пароль" />
-      <Button
-        type="submit"
-        size="large"
-        variant="outlined"
-        className={classes.submitBtn}
-        fullWidth
-      >
+      <Button type="submit" className={classes.mt3}>
         Войти
       </Button>
     </form>

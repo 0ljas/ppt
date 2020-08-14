@@ -43,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
 const ProductSort = () => {
   const classes = useStyles();
   const [sortType, setSortType] = React.useState("");
-
   const handleChange = (event) => {
     setSortType(event.target.value);
   };

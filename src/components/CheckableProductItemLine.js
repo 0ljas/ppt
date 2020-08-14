@@ -6,10 +6,11 @@ import {
   CardMedia,
   CardContent,
   IconButton,
+  Checkbox,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import cx from "classnames";
-import { SmsOutlined } from "@material-ui/icons";
+import { DeleteOutlineOutlined, StarBorder } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -61,13 +62,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CardLine = ({ imgUrl, productName, brandName, oldPrice, price }) => {
+const CheckableProductItemLine = ({
+  imgUrl,
+  productName,
+  brandName,
+  oldPrice,
+  price,
+}) => {
   const classes = useStyles();
+  const [checked, setChecked] = React.useState(false);
+  const handleClick = () => {
+    setChecked(!checked);
+  };
+  const handleClickStar = (e) => {
+    e.stopPropagation();
+  };
+  const handleClickDelete = (e) => {
+    e.stopPropagation();
+  };
 
   return (
     <Card elevation={0} className={classes.mt2}>
-      <CardActionArea disableRipple>
+      <CardActionArea disableRipple onClick={handleClick}>
         <div className={classes.root}>
+          <Checkbox checked={checked} />
           <div className={classes.mediaWrapper}>
             <CardMedia
               component="img"
@@ -102,13 +120,18 @@ const CardLine = ({ imgUrl, productName, brandName, oldPrice, price }) => {
               {price}
             </Typography>
           </CardContent>
-          <IconButton className={classes.toolbar}>
-            <SmsOutlined fontSize="large" />
-          </IconButton>
+          <div className={classes.toolbar}>
+            <IconButton onClick={handleClickStar}>
+              <StarBorder fontSize="large" />
+            </IconButton>
+            <IconButton onClick={handleClickDelete}>
+              <DeleteOutlineOutlined fontSize="large" />
+            </IconButton>
+          </div>
         </div>
       </CardActionArea>
     </Card>
   );
 };
 
-export default CardLine;
+export default CheckableProductItemLine;

@@ -98,19 +98,7 @@ const NavBar = () => {
   const classes = useStyles();
   const navbarRef = useRef(null);
   const [sticked, setSticked] = useState(false);
-
   const bull = <span className={classes.bullet}>•</span>;
-
-  useEffect(() => {
-    const domNode = navbarRef.current;
-
-    window.addEventListener("scroll", () => handleScroll(domNode), true);
-
-    return () => {
-      window.removeEventListener("scroll", () => handleScroll(domNode));
-    };
-  }, [navbarRef]);
-
   const handleScroll = (el) => {
     const { top } = el.getBoundingClientRect();
     if (top === 0) {
@@ -119,6 +107,15 @@ const NavBar = () => {
       setSticked(false);
     }
   };
+
+  useEffect(() => {
+    const domNode = navbarRef.current;
+    window.addEventListener("scroll", () => handleScroll(domNode), true);
+
+    return () => {
+      window.removeEventListener("scroll", () => handleScroll(domNode));
+    };
+  }, [navbarRef]);
 
   return (
     <Paper square elevation={0} className={classes.root} ref={navbarRef}>
@@ -136,13 +133,11 @@ const NavBar = () => {
             </ButtonGroup>
           )}
         </Grid>
-
         <Grid item xs={6} lg={4}>
           <Typography variant="h4" className={classes.logo} align="center">
             TRIUMPH PRET{bull}A{bull}PORTER
           </Typography>
         </Grid>
-
         <Grid
           container
           item
@@ -175,7 +170,6 @@ const NavBar = () => {
           )}
         </Grid>
       </Grid>
-
       <Grid container alignItems="center" className={classes.grid}>
         <Grid item xs={3}>
           {!sticked && (
@@ -186,7 +180,6 @@ const NavBar = () => {
             </ButtonGroup>
           )}
         </Grid>
-
         <Grid
           container
           item
@@ -200,7 +193,6 @@ const NavBar = () => {
           <Link href="#">ДЛЯ НЕЁ</Link>
           <Link href="#">OUTLET</Link>
         </Grid>
-
         <Grid container item xs={3} justify="flex-end" alignItems="center">
           {sticked && (
             <div>

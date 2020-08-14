@@ -81,7 +81,6 @@ export default function SearchBar({ hideCondition }) {
   const ref = useRef(null);
   const classes = useStyles();
   const [selectedValue, setSelectedValue] = React.useState("a");
-
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
   };

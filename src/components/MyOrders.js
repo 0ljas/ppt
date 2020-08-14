@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import StandartContainer from "./StandartContainer";
-import CardLine from "./CardLine";
+import ProductItemLine from "./ProductItemLine";
 
 const mockData = [
   {
@@ -33,7 +33,7 @@ const MyOrders = () => {
       <Grid item xs={8} xl={7}>
         <StandartContainer title="Мои заказы" badge="3 товара">
           {mockData.map((item, idx) => {
-            return <CardLine key={idx} {...item} />;
+            return <ProductItemLine key={idx} {...item} />;
           })}
         </StandartContainer>
       </Grid>

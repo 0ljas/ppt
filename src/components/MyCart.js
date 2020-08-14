@@ -8,9 +8,9 @@ import {
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import StandartContainer from "./StandartContainer";
 import cx from "classnames";
-import CheckableCardLine from "./CheckableCardLine";
+import StandartContainer from "./StandartContainer";
+import CheckableProductItemLine from "./CheckableProductItemLine";
 import Button from "./extends/PPTButton";
 
 const mockData = [
@@ -75,19 +75,18 @@ const useStyles = makeStyles((theme) => ({
 
 const MyCart = () => {
   const classes = useStyles();
-
   const [deliveryType, setDeliveryType] = React.useState("");
-
   const handleChange = (event) => {
     setDeliveryType(event.target.value);
   };
+
   return (
     <Grid container justify="center">
       <Grid item container xs={10} spacing={2}>
         <Grid item xs={8}>
           <StandartContainer title="Моя Корзина" badge="35 товаров">
             {mockData.map((item, idx) => {
-              return <CheckableCardLine key={idx} {...item} />;
+              return <CheckableProductItemLine key={idx} {...item} />;
             })}
           </StandartContainer>
         </Grid>

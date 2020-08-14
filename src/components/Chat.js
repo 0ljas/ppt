@@ -15,7 +15,6 @@ import StandartContainer from "./StandartContainer";
 import cx from "classnames";
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
   fsOblique: {
     fontStyle: "oblique",
   },

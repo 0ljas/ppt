@@ -50,19 +50,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MediaCard({
+const ProductItem = ({
   productType,
   brandName,
   imgUrl,
   price,
   sold,
   inCart,
-}) {
+}) => {
   const classes = useStyles();
   const addToShoppingCart = (evt) => {
     evt.stopPropagation();
   };
-
   const handleClick = () => {};
 
   return (
@@ -114,4 +113,6 @@ export default function MediaCard({
       </CardActionArea>
     </Card>
   );
-}
+};
+
+export default ProductItem;
