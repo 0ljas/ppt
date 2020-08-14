@@ -1,16 +1,11 @@
 import React from "react";
-import {
-  Box,
-  Typography,
-  Button,
-  IconButton,
-  TextField,
-} from "@material-ui/core";
+import { Box, Typography, IconButton, TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import StandartContainer from "./StandartContainer";
 import StarIcon from "@material-ui/icons/Star";
 import cx from "classnames";
 import { Instagram, YouTube, Facebook, Twitter } from "@material-ui/icons";
+import Button from "./extends/PPTButton";
 
 const useStyles = makeStyles((theme) => ({
   bullet: {
@@ -29,12 +24,6 @@ const useStyles = makeStyles((theme) => ({
   },
   mr2: {
     marginRight: theme.spacing(2),
-  },
-  btn: {
-    borderWidth: 2,
-    borderColor: "inherit",
-    borderRadius: 0,
-    fontStyle: "oblique",
   },
   aiCenter: {
     display: "flex",
@@ -88,14 +77,7 @@ const About = () => {
         МАГАЗИН ЭЛИТНОЙ ОДЕЖДЫ В НУР-СУЛТАНЕ
       </Typography>
       <Typography align="center">
-        <Button
-          type="button"
-          size="large"
-          variant="outlined"
-          className={classes.btn}
-        >
-          О КОМПАНИИ
-        </Button>
+        <Button>О КОМПАНИИ</Button>
       </Typography>
     </StandartContainer>
   );
@@ -177,12 +159,7 @@ const EmailSubscription = () => {
           className={classes.emailInput}
           type="email"
         />
-        <Button
-          type="submit"
-          size="large"
-          variant="outlined"
-          className={cx(classes.btn, classes.emailBtn)}
-        >
+        <Button type="submit" className={classes.emailBtn}>
           ОСТАВАТЬСЯ В ТРЕНДЕ
         </Button>
       </form>

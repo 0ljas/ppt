@@ -1,22 +1,18 @@
 import React from "react";
-import { TextField, Button } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Button from "./extends/PPTButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    "& > *": {
+    "& > *:not(:last-child)": {
       marginBottom: theme.spacing(1),
     },
   },
-  submitBtn: {
+  mt3: {
     marginTop: theme.spacing(3),
-    borderWidth: 2,
-    borderColor: "inherit",
-    borderRadius: 0,
-    fontStyle: "oblique",
-    fontSize: 17,
   },
 }));
 
@@ -32,15 +28,7 @@ const SignupForm = () => {
       <TextField id="standard-basic1" label="Номер телефона" />
       <TextField id="standard-basic2" label="Пароль" />
       <TextField id="standard-basic3" label="Повторите пароль" />
-      <Button
-        type="submit"
-        size="large"
-        variant="outlined"
-        className={classes.submitBtn}
-        fullWidth
-      >
-        Зарегестрироваться
-      </Button>
+      <Button className={classes.mt3}>Зарегестрироваться</Button>
     </form>
   );
 };

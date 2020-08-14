@@ -6,10 +6,10 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Button,
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
+import Button from "./extends/PPTButton";
 
 const useStyles = makeStyles((theme) => ({
   filter: {
@@ -26,13 +26,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightMedium,
   },
-  btn: {
+  mt2: {
     marginTop: theme.spacing(2),
-    width: "100%",
-    borderWidth: 2,
-    borderColor: "inherit",
-    borderRadius: 0,
-    fontStyle: "oblique",
   },
 }));
 
@@ -113,12 +108,7 @@ const ProductFilter = () => {
         </AccordionDetails>
       </Accordion>
       <Box px={2} mt="auto">
-        <Button
-          type="submit"
-          size="large"
-          variant="outlined"
-          className={classes.btn}
-        >
+        <Button fullWidth className={classes.mt2}>
           ОТФИЛЬТРОВАТЬ ТОВАРЫ
         </Button>
       </Box>

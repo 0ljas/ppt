@@ -1,16 +1,11 @@
 import React from "react";
-import { Typography, Grid, Button } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import StandartContainer from "./StandartContainer";
 import Card from "./Card";
-import { makeStyles } from "@material-ui/core/styles";
+import Button from "./extends/PPTButton";
 
 const useStyles = makeStyles((theme) => ({
-  btn: {
-    borderWidth: 2,
-    borderColor: "inherit",
-    borderRadius: 0,
-    fontStyle: "oblique",
-  },
   mt5: {
     marginTop: theme.spacing(5),
   },
@@ -59,14 +54,7 @@ const SeasonNoveltys = () => {
         </Grid>
       </Grid>
       <Typography align="center" className={classes.mt5}>
-        <Button
-          type="button"
-          size="large"
-          variant="outlined"
-          className={classes.btn}
-        >
-          ПОКАЗАТЬ ВСЕ
-        </Button>
+        <Button>ПОКАЗАТЬ ВСЕ</Button>
       </Typography>
     </StandartContainer>
   );

@@ -3,17 +3,16 @@ import {
   Box,
   Grid,
   TextField,
-  Button,
   Checkbox,
   FormControlLabel,
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import StandartContainer from "./StandartContainer";
+import Button from "./extends/PPTButton";
 import cx from "classnames";
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
   mt2: {
     marginTop: theme.spacing(2),
   },
@@ -52,12 +51,6 @@ const useStyles = makeStyles((theme) => ({
   },
   checkboxLabel: {
     fontSize: theme.typography.pxToRem(15),
-    fontStyle: "oblique",
-  },
-  btn: {
-    borderWidth: 2,
-    borderColor: "inherit",
-    borderRadius: 0,
     fontStyle: "oblique",
   },
 }));
@@ -127,14 +120,7 @@ const BuyerForm = () => {
           </Box>
 
           <Typography align="center" className={classes.mt2}>
-            <Button
-              type="button"
-              size="large"
-              variant="outlined"
-              className={classes.btn}
-            >
-              СФОРМИРОВАТЬ ЗАКАЗ
-            </Button>
+            <Button>СФОРМИРОВАТЬ ЗАКАЗ</Button>
           </Typography>
         </StandartContainer>
       </Grid>

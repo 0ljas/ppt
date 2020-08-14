@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Typography,
-  Button,
   Grid,
   IconButton,
   FormControl,
@@ -14,6 +13,7 @@ import StarIcon from "@material-ui/icons/Star";
 import { yellow } from "@material-ui/core/colors";
 import cx from "classnames";
 import StandartContainer from "./StandartContainer";
+import Button from "./extends/PPTButton";
 
 const useStyles = makeStyles((theme) => ({
   media: {
@@ -83,12 +83,6 @@ const useStyles = makeStyles((theme) => ({
       top: "50%",
       backgroundColor: theme.palette.text.secondary,
     },
-  },
-  btn: {
-    borderWidth: 2,
-    borderColor: "inherit",
-    borderRadius: 0,
-    fontStyle: "oblique",
   },
 }));
 
@@ -219,13 +213,7 @@ const ProductPreview = () => {
               Таблица размеров
             </Typography>
 
-            <Button
-              type="button"
-              size="large"
-              fullWidth
-              variant="outlined"
-              className={cx(classes.btn, classes.mt3)}
-            >
+            <Button fullWidth className={classes.mt3}>
               ДОБАВИТЬ В КОРЗИНУ
             </Button>
             <Typography className={cx(classes.fsOblique, classes.mt2)}>

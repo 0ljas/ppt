@@ -6,12 +6,12 @@ import {
   InputLabel,
   FormControl,
   Typography,
-  Button,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import StandartContainer from "./StandartContainer";
 import cx from "classnames";
 import CheckableCardLine from "./CheckableCardLine";
+import Button from "./extends/PPTButton";
 
 const mockData = [
   {
@@ -42,10 +42,6 @@ const useStyles = makeStyles((theme) => ({
     padding: `0 ${theme.spacing(1)}px`,
     fontStyle: "oblique",
   },
-  input: {
-    width: 100,
-    padding: `0 ${theme.spacing(1)}px`,
-  },
   mx2: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
@@ -73,12 +69,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "2rem",
     lineHeight: 1,
     fontWeight: 500,
-    fontStyle: "oblique",
-  },
-  btn: {
-    borderWidth: 2,
-    borderColor: "inherit",
-    borderRadius: 0,
     fontStyle: "oblique",
   },
 }));
@@ -146,13 +136,7 @@ const MyCart = () => {
               Итого к оплате:
             </Typography>
             <Typography className={classes.price}>82 000 тг.</Typography>
-            <Button
-              type="button"
-              size="large"
-              fullWidth
-              variant="outlined"
-              className={cx(classes.btn, classes.mt3)}
-            >
+            <Button fullWidth className={classes.mt3}>
               Перейти к оплате
             </Button>
           </StandartContainer>

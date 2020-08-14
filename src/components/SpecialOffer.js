@@ -16,15 +16,6 @@ import StandartContainer from "./StandartContainer";
 import cx from "classnames";
 
 const useStyles = makeStyles((theme) => ({
-  btn: {
-    borderWidth: 2,
-    borderColor: "inherit",
-    borderRadius: 0,
-    fontStyle: "oblique",
-  },
-  mt5: {
-    marginTop: theme.spacing(5),
-  },
   cardHeader: {
     padding: 0,
     paddingTop: theme.spacing(2),
@@ -46,9 +37,6 @@ const useStyles = makeStyles((theme) => ({
   },
   mb3: {
     marginBottom: theme.spacing(3),
-  },
-  pt3: {
-    paddingTop: theme.spacing(3),
   },
   oldPrice: {
     position: "relative",

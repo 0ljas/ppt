@@ -1,9 +1,10 @@
 import React from "react";
-import { Grid, Typography, Button } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import StandartContainer from "./StandartContainer";
 import { makeStyles } from "@material-ui/core/styles";
 import cx from "classnames";
 import MiniCard from "./MiniCard";
+import Button from "./extends/PPTButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,13 +35,6 @@ const useStyles = makeStyles((theme) => ({
   },
   mb3: {
     marginBottom: theme.spacing(3),
-  },
-  btn: {
-    borderWidth: 2,
-    color: theme.palette.background.default,
-    borderColor: "inherit",
-    borderRadius: 0,
-    fontStyle: "oblique",
   },
 }));
 
@@ -85,14 +79,7 @@ const Article = () => {
             всем, что происходит в жизни я обретаю настоящую легкость...
           </Typography>
           <Typography align="center">
-            <Button
-              type="button"
-              size="large"
-              variant="outlined"
-              className={classes.btn}
-            >
-              ЧИТАТЬ ДАЛЕЕ
-            </Button>
+            <Button inverse>ЧИТАТЬ ДАЛЕЕ</Button>
           </Typography>
         </Grid>
       </Grid>
