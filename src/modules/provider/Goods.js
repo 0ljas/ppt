@@ -63,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   moreBtn: {
+    textDecoration: "underline",
     "&:hover": {
       textDecoration: "underline",
     },
