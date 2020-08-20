@@ -57,6 +57,7 @@ const ProductItem = ({
   price,
   sold,
   inCart,
+  action,
 }) => {
   const classes = useStyles();
   const addToShoppingCart = (evt) => {
@@ -64,21 +65,23 @@ const ProductItem = ({
   };
   const handleClick = () => {};
 
+  let Action = () => (
+    <IconButton onClick={addToShoppingCart}>
+      {inCart ? (
+        <StarIcon fontSize="large" style={{ color: yellow["700"] }} />
+      ) : (
+        <StarBorderIcon fontSize="large" />
+      )}
+    </IconButton>
+  );
+  if (typeof action === "function") {
+    Action = action;
+  }
+
   return (
     <Card elevation={0}>
       <CardActionArea onClick={handleClick} disableRipple>
-        <CardHeader
-          action={
-            <IconButton onClick={addToShoppingCart}>
-              {inCart ? (
-                <StarIcon fontSize="large" style={{ color: yellow["700"] }} />
-              ) : (
-                <StarBorderIcon fontSize="large" />
-              )}
-            </IconButton>
-          }
-          className={classes.cardHeader}
-        />
+        <CardHeader action={<Action />} className={classes.cardHeader} />
         <div className={classes.mediaWrapper}>
           <CardMedia
             component="img"
