@@ -21,6 +21,7 @@ import Chat from "./Chat";
 // provider
 import MyGoods from "../modules/provider/Goods";
 import AccountDetails from "../modules/provider/AccountDetails";
+import OrderList from "../modules/provider/OrderList";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,9 +41,10 @@ const Content = () => {
 
   return (
     <Box className={classes.root}>
+      <OrderList />
       <AccountDetails />
       <MyGoods />
-      {/* <Chat /> */}
+      <Chat />
       <BrandList />
       <ProductPreview />
       <MyCart />

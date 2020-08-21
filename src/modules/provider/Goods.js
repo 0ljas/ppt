@@ -2,60 +2,27 @@ import React from "react";
 import {
   Grid,
   Typography,
-  Link,
   IconButton,
   Box,
   Button as MuiButton,
 } from "@material-ui/core";
-import { makeStyles, fade } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
+import EditOutlinedIcon from "@material-ui/icons/EditOutlined";
 import Container from "../../components/StandartContainer";
 import Button from "../../components/extends/PPTButton";
 import ProductItem from "../../components/ProductItem";
-import EditOutlinedIcon from "@material-ui/icons/EditOutlined";
-
-import cx from "classnames";
+import NavLeft from "./NavLeft";
 import mockData from "../../mocks";
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
-  p1: {
-    padding: theme.spacing(1),
-  },
-  mb1: {
-    marginBottom: theme.spacing(1),
-  },
-  mb3: {
-    marginBottom: theme.spacing(3),
-  },
-  mt2: {
-    marginTop: theme.spacing(3),
-  },
-  mtAuto: {
-    marginTop: "auto",
-  },
   fwBold: {
     fontWeight: theme.typography.fontWeightBold,
   },
   fsOblique: {
     fontStyle: "oblique",
   },
-  heading: {
-    padding: `${theme.spacing(1 / 2)}px ${theme.spacing(1)}px`,
-    marginBottom: theme.spacing(1),
-  },
-  links: {
-    display: "flex",
-    flexDirection: "column",
-    minHeight: 500,
-    "& > a": {
-      padding: `${theme.spacing(1 / 2)}px ${theme.spacing(1)}px`,
-      display: "flex",
-      justifyContent: "space-between",
-    },
-
-    "& > a:hover": {
-      backgroundColor: fade(theme.palette.common.black, 0.2),
-    },
+  mt2: {
+    marginTop: theme.spacing(3),
   },
   header: {
     display: "flex",
@@ -78,37 +45,18 @@ const EditItem = () => (
 
 const Goods = () => {
   const classes = useStyles();
-
+  const links = [
+    { label: "На модарации", count: 10 },
+    { label: "Отклоненные", count: 100 },
+    { label: "Подтвежденные", count: 1000 },
+    { label: "Проданные", count: 10 },
+    { label: "Удаленные", count: 10 },
+  ];
   return (
     <Grid container justify="center">
       <Grid item xs={10} spacing={2} container className={classes.root}>
         <Grid item xs={3}>
-          <Container>
-            <Typography variant="h6" className={classes.heading}>
-              Разделы
-            </Typography>
-
-            <Typography className={classes.links}>
-              <Link underline="none" color="inherit" href="#">
-                На модарации <span className={classes.fwBold}>10</span>
-              </Link>
-              <Link underline="none" color="inherit" href="#">
-                Отклоненные <span className={classes.fwBold}>100</span>
-              </Link>
-              <Link underline="none" color="inherit" href="#">
-                Подтвежденные <span className={classes.fwBold}>1000</span>
-              </Link>
-              <Link underline="none" color="inherit" href="#">
-                Проданные <span className={classes.fwBold}>10</span>
-              </Link>
-              <Link underline="none" color="inherit" href="#">
-                Удаленные <span className={classes.fwBold}>10</span>
-              </Link>
-              <Button className={cx(classes.mtAuto, classes.mb3)}>
-                Отфильтровать товар
-              </Button>
-            </Typography>
-          </Container>
+          <NavLeft links={links} action />
         </Grid>
         <Grid item xs={9}>
           <Container>
