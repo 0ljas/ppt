@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/ppt/static/js/main.c3328712.chunk.js",
-    "main.js.map": "/ppt/static/js/main.c3328712.chunk.js.map",
+    "main.js": "/ppt/static/js/main.a1344c70.chunk.js",
+    "main.js.map": "/ppt/static/js/main.a1344c70.chunk.js.map",
     "runtime-main.js": "/ppt/static/js/runtime-main.55cd4bf9.js",
     "runtime-main.js.map": "/ppt/static/js/runtime-main.55cd4bf9.js.map",
-    "static/js/2.5ec1b251.chunk.js": "/ppt/static/js/2.5ec1b251.chunk.js",
-    "static/js/2.5ec1b251.chunk.js.map": "/ppt/static/js/2.5ec1b251.chunk.js.map",
+    "static/js/2.5d91c27b.chunk.js": "/ppt/static/js/2.5d91c27b.chunk.js",
+    "static/js/2.5d91c27b.chunk.js.map": "/ppt/static/js/2.5d91c27b.chunk.js.map",
     "index.html": "/ppt/index.html",
-    "precache-manifest.8b06a49f1cf107128dc2d19c9a5f80c0.js": "/ppt/precache-manifest.8b06a49f1cf107128dc2d19c9a5f80c0.js",
+    "precache-manifest.12e115ec27d4718d3e3263ea7d79de58.js": "/ppt/precache-manifest.12e115ec27d4718d3e3263ea7d79de58.js",
     "service-worker.js": "/ppt/service-worker.js",
-    "static/js/2.5ec1b251.chunk.js.LICENSE.txt": "/ppt/static/js/2.5ec1b251.chunk.js.LICENSE.txt"
+    "static/js/2.5d91c27b.chunk.js.LICENSE.txt": "/ppt/static/js/2.5d91c27b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.55cd4bf9.js",
-    "static/js/2.5ec1b251.chunk.js",
-    "static/js/main.c3328712.chunk.js"
+    "static/js/2.5d91c27b.chunk.js",
+    "static/js/main.a1344c70.chunk.js"
   ]
 }
