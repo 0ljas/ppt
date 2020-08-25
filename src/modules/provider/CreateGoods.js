@@ -11,7 +11,6 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import StandartContainer from "../../components/StandartContainer";
-import cx from "classnames";
 
 const useStyles = makeStyles((theme) => ({
   m3: {

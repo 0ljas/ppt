@@ -8,9 +8,11 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontWeight: theme.typography.fontWeightBold,
+    fontSize: theme.typography.pxToRem(22),
+    lineHeight: 1,
   },
   badge: {
-    fontStyle: "oblique",
+    lineHeight: 1,
   },
 }));
 

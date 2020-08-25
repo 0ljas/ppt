@@ -21,7 +21,7 @@ const GET_ME = gql`
 `;
 
 const App = () => {
-  const { data, loading, error } = useQuery(GET_ME);
+  const { data, loading } = useQuery(GET_ME);
   console.log("data", data, loading);
   return (
     <Container maxWidth="xl" disableGutters>

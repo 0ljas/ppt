@@ -8,14 +8,12 @@ const styles = (theme) => ({
     borderWidth: 2,
     borderColor: "inherit",
     borderRadius: 0,
-    fontStyle: "oblique",
   },
   inverse: {
     borderWidth: 2,
     borderColor: theme.palette.background.default,
     color: theme.palette.background.default,
     borderRadius: 0,
-    fontStyle: "oblique",
   },
 });
 

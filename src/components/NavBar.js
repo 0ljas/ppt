@@ -22,20 +22,20 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "sticky",
     top: 0,
-    marginTop: -193,
+    marginTop: -174,
     width: "100%",
-    minHeight: 129,
-    padding: `${theme.spacing(2)}px 0`,
+    minHeight: 110,
+    padding: `${theme.typography.pxToRem(20)} 0`,
     zIndex: 1101,
   },
   logo: {
     fontWeight: theme.typography.fontWeightBold,
+    fontSize: theme.typography.pxToRem(24),
   },
   links: {
     "& > a": {
       color: "inherit",
-      fontStyle: "oblique",
-      fontSize: 18,
+      fontSize: "1rem",
     },
   },
   grid: {
@@ -44,8 +44,9 @@ const useStyles = makeStyles((theme) => ({
   // search input
   search: {
     position: "relative",
+    border: "1px solid #000000",
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.black, 0.15),
+    backgroundColor: "#ffffff",
     "&:hover": {
       backgroundColor: fade(theme.palette.common.black, 0.25),
     },
@@ -57,9 +58,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   searchIcon: {
-    padding: theme.spacing(0, 2),
+    padding: theme.spacing(0, 1),
     height: "100%",
     position: "absolute",
+    top: 0,
+    right: 0,
     pointerEvents: "none",
     display: "flex",
     alignItems: "center",
@@ -69,8 +72,8 @@ const useStyles = makeStyles((theme) => ({
     color: "inherit",
   },
   inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+    padding: theme.spacing(1),
+    paddingRight: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("sm")]: {
@@ -85,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: `${theme.spacing(1)}px`,
   },
   gutterBottom: {
-    marginBottom: `${theme.spacing(1)}px`,
+    marginBottom: theme.typography.pxToRem(15),
   },
   bullet: {
     display: "inline-block",
@@ -153,7 +156,7 @@ const NavBar = () => {
                   <SearchIcon />
                 </div>
                 <InputBase
-                  placeholder="Поиск…"
+                  placeholder="Поиск"
                   classes={{
                     root: classes.inputRoot,
                     input: classes.inputInput,
@@ -173,7 +176,7 @@ const NavBar = () => {
       <Grid container alignItems="center" className={classes.grid}>
         <Grid item xs={3}>
           {!sticked && (
-            <ButtonGroup color="inherit" size="small" variant="text">
+            <ButtonGroup color="inherit" size="small" variant="outlined">
               <Button>RU</Button>
               <Button>EN</Button>
               <Button>QZ</Button>
